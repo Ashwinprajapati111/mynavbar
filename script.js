@@ -32,13 +32,24 @@ function myFunction() {
   }
 }
 window.onscroll = function () {
-    myscroll();
+  myscroll();
 };
 function myscroll() {
-    var x = document.getElementById("myTopnav");
+  var x = document.getElementById("myTopnav");
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    var x = document.getElementById("myTopnav").className = "myscroll";
+    document.getElementById("scrollmyTopnav").className = "myscroll";
   } else {
-    x.className = "topnav";
+    document.getElementById("scrollmyTopnav").className = "sctopnav";
   }
+}
+function scrollbar() {
+    var xyz = document.getElementById("scrollmenu");
+  if (xyz.style.display === "none") {
+    xyz.style.display = "block";
+  } else{
+    xyz.style.display = "none";
+  }
+//   else {
+//     scrolll.style.display = "block";
+//   }
 }
